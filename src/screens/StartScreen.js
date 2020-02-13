@@ -14,42 +14,42 @@ const StartScreen = ({ navigation }) => {
             <ScrollView>
                 <Text style={styles.formLabel}> Configurează-ți profilul </Text>
                 <Input
-                    containerStyle={{ width: 'none', padding: 1 }}
+                    containerStyle={{  padding: 1 }}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     labelStyle={styles.label}
                     label='Nume'
                 />
                 <Input
-                    containerStyle={{ width: 'none' }}
+                    containerStyle={{  }}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     label='Prenume'
                     labelStyle={styles.label}
                 />
                 <Input
-                    containerStyle={{ width: 'none' }}
+                    containerStyle={{ }}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     labelStyle={styles.label}
                     label='Data nastere'
                 />
                 <Input
-                    containerStyle={{ width: 'none' }}
+                    containerStyle={{  }}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     labelStyle={styles.label}
                     label='Telefon'
                 />
                 <Input
-                    containerStyle={{ width: 'none' }}
+                    containerStyle={{}}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     labelStyle={styles.label}
                     label='Nume contact de urgenta'
                 />
                 <Input
-                    containerStyle={{ width: 'none' }}
+                    containerStyle={{  }}
                     inputContainerStyle={styles.inputContainer}
                     errorStyle={{ color: 'red' }}
                     labelStyle={styles.label}

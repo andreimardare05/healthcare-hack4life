@@ -1,31 +1,29 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { createAppContainer } from 'react-navigation';
+import { AsyncStorage } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
+import uuid from 'react-native-uuid';
 
-import GlobalFont from 'react-native-global-font'
 import StartScreen from './src/screens/StartScreen'
+import HomeScreen from './src/screens/HomeScreen'
+import FScreen from './src/screens/FScreen'
 
-const AppNavigator = createStackNavigator({
-  Home: {
-    screen: StartScreen
-  },
-},{
-  initialRouteName: "Home",
-  defaultNavigationOptions: {
-    headerShown: false
-  },
-});
+const navigator = createStackNavigator(
+	{
+		Home: HomeScreen,
+		FScreen: FScreen,
+		Start: StartScreen
+	},
+	{
+		initialRouteName: "Home",
+		defaultNavigationOptions: { headerShown: false }
+	}
+);
 
-const AppContainer = createAppContainer(AppNavigator);
+(async () => {
+	await AsyncStorage.setItem('deviceId', uuid.v4());
+})();
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+const AppContainer = createAppContainer(navigator);
 
 export default AppContainer;

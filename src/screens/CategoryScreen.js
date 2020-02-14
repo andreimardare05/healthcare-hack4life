@@ -1,6 +1,11 @@
 import React from 'react';
 import { Text, StyleSheet, View, Image } from 'react-native';
+
 const CategoryScreen = (route) => {
+    setInterval(() => {
+        route.navigation.state.params.nextStep()
+    }, 1000);
+
     return (
         <View style={styles.container}>
             <Text style={styles.text}>{route.navigation.state.params.pas}</Text>

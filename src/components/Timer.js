@@ -1,16 +1,21 @@
-import React,{useState} from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
 
 const Timer = props => {
-    const [time,setTime] = useState(props.time);
+    const [time, setTime] = useState(23);
     const getTimerCountDown = () => {
         if(time>0){
-        setTimeout(() => {
-            let c=time
-          setTime(c-1);
-        }, 1000);
-    }
+            setTimeout(() => {
+                let c = time
+
+                if (time === -1) {
+                    setTime(null);
+                }
+
+                setTime(c-1);
+            }, 1000);
+        }
     };
     
     return (

@@ -5,12 +5,15 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import GlobalFont from 'react-native-global-font'
 import StartScreen from './src/screens/StartScreen'
+import HomeScreen from './src/screens/HomeScreen';
+import SpeechTestScreen from './src/screens/SpeechTestScreen'
 
 const AppNavigator = createStackNavigator({
   Home: {
-    screen: StartScreen
-  },
-},{
+    screen: StartScreen 
+  }
+  ,
+}, {
   initialRouteName: "Home",
   defaultNavigationOptions: {
     headerShown: false

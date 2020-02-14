@@ -43,4 +43,6 @@ target 'hack4life' do
 
   # react-native-cli autolinking
   use_native_modules!
+  pod 'TextToSpeech', :path => '../node_modules/react-native-tts'
+
 end

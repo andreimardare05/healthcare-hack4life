@@ -6,15 +6,15 @@ import Timer from '../components/Timer'
 const getRandom = () => {
     return Math.floor(Math.random() * (100000 - 9999) + 9999);
 }
-const addNumber = (num) =>{
 
-}
 
 const TypeScreen = () => {
     const [number,setNumber] = useState(getRandom())
     const [inserted,setInserted] = useState([])
     const v =[1,2,3,4,5,6,7,8,9,0]
+
 	return (
+    
 		<View style={styles.c}>
 			<Text style={styles.text}> Tasteaza urmatorul numar:</Text>
             <Text style={styles.numbers}>{number}</Text>
@@ -32,9 +32,11 @@ const TypeScreen = () => {
 
 const styles = StyleSheet.create({
     c:{
-        display:"flex",
-        flexDirection:"column",
-        justifyContent:"space-around",
+        flex: 1,
+        backgroundColor: '#FFF',
+        alignItems: 'center',
+        justifyContent: 'center',
+        
     },
     text:{
         fontStyle: "normal",

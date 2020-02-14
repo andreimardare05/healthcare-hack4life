@@ -2,8 +2,6 @@ import React from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 
 const getNumber = (actual,correct) => {
-    
-   
         if(actual.toString()===correct) {
             return (
                 <Text style={styles.numberGreen} >{actual}</Text>

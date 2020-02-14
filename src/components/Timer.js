@@ -20,7 +20,7 @@ const Timer = props => {
             <View style={backStyle(time,props.time)}>
                 <View style={barStyle(time,props.time)}></View>
             </View>
-            <Text style={textStyle(time)}>Timpul a expirat!</Text>
+            
         </View>
     );
 };
@@ -60,20 +60,5 @@ const backStyle = (time,max) => {
     }
 }
 
-const textStyle = (time) => {
-    let v;
-    time===0 ? v="visible": v="hidden";
-    return {
-        visibility: v,
-        fontStyle: "normal",
-        fontWeight: "normal",
-        fontSize: 24,
-        lineHeight: 28,
-        textAlign: "center",
-        color: "#FF685A",
-        marginTop:6,
-        
-    }
-}
 
 export default Timer;
